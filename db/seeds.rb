@@ -7,3 +7,17 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Restaurant.destroy_all
+
+restaurants = [
+  { name: "Chez Pierre", address: "10 rue de Paris, Paris", phone_number: "0123456789", category: "french" },
+  { name: "La Bella Napoli", address: "25 avenue des Champs, Lyon", phone_number: "0987654321", category: "italian" },
+  { name: "Sushi Zen", address: "5 boulevard Haussmann, Marseille", phone_number: "0678901234", category: "japanese" },
+  { name: "Le Wok d'Or", address: "88 avenue de la République, Bordeaux", phone_number: "0765432189", category: "chinese" },
+  { name: "Brasserie Belge", address: "42 rue Royale, Lille", phone_number: "0654321098", category: "belgian" }
+]
+
+restaurants.each do |restaurant|
+  Restaurant.create!(restaurant)
+end
